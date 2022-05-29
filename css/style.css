@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Exo;
+    src: url(fonts/exo/Exo-VariableFont_wght.ttf);
+}
+
+html{
+    font-family: 'Exo';
+    font-size: 20px;
+    font-style: normal;
+}
+
+.bg_img--dark{
+    background-image: url(assets/BG-dark-mode.png);
+}
+
+.login_btn--dark{
+    background: #4CC986;
+    border-radius: 6px;
+    height: 47px;
+    width: 362px;
+}
