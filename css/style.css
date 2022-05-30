@@ -9,68 +9,141 @@ html{
     font-style: normal;
     font-weight: 400;
 }
-/* .flex{
+
+/* Helper classes */
+
+.flexbox{
     display: flex;
+    flex-flow: row wrap;
+}
+
+.flexbox--justify-center{
+    justify-content: center;
+}
+
+.flexbox--align-items-center{
     align-items: center;
-} */
-
-.text-align--center{
-    text-align: center;
 }
 
-.font-weight--bold{
-    font-weight: 700;
-}
+/* Login */
 
-.bg_img--dark{
-    background-image: url(assets/BG-dark-mode.png);
+/* Carrousel */
+.carrousel{
+    position: relative;
+    margin: 0 auto;
     height: 1062px;
-    width: 1494px;
+    width: 100%;
+    max-width: 1494px;
+    max-height: 1062px;    
 }
-
-.login_box--dark{
-position: absolute;
-width: 462px;
-height: 702px;
-left: 932px;
-top: 178px;
-
-background: rgba(48, 48, 48, 0.5);
-background-blend-mode: overlay;
-backdrop-filter: blur(10px);
-border-radius: 12px;
+.carrousel_track-container{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 1494px;
+    max-height: 1062px;
 }
-
-.login_box_title--dark{
+.carrousel_track{
+    position: relative;
+    top: 0px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    max-width: 1494px;
+    max-height: 1062px;
+}
+.carrousel_slider{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: inherit;
+    width: inherit;
+    max-height: 1062px;
+    max-width: 1494px;
+}
+li.carrousel_slider{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.carrousel_nav-bar{
+    position: relative;
+    top: 995px;
+    margin: 0 auto;
+    width: 120px;
     height: 27px;
-    width: 362px;
-    left: 65.73%;
-    right: 10.04%;
-    top: calc(50% - 27px/2 - 299.5px);
-    font-size: inherit;
-    line-height: 27px;
-    color: #FFFFFF;
+    background: #515151;
+    border-radius: 18px;
 }
-
-.login_box_subtitle--dark{
-    width: 362px;
-    height: 28px;
-    left: 982px;
-    top: 253px;
-    font-size: 0.75rem;
-    line-height: 21px;
-    color: #FFFFFF;
+.carrousel_nav-bar_dot:last-of-type{
+    margin: 10px 17px 10px 4.5px;
 }
-
-.login_btn--dark{
-    background: #4CC986;
-    border-radius: 6px;
-    height: 47px;
-    width: 362px;
+.carrousel_nav-bar_dot:first-of-type{
+    margin: 10px 4.5px 10px 16px;
 }
-
-.login_optbtn--dark{
-    border: 2px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 6px;
+.carrousel_nav-bar_dot{
+    flex: 1;
+    height: 7px;
+    width: 7px;
+    margin: 10px 4.5px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 25%;
+    cursor: pointer;
+}
+.carrousel_btn-container{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carrousel_btn{
+    cursor: pointer;
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+    background-color: #515151;
+    opacity: 80%;
+    border: none;
+}
+.carrousel_btn-separator{
+    flex: 1;
+}
+.carrousel_btn--left{
+    align-self: flex-end;
+    margin: 0 0 0 32px;
+    background: center no-repeat url(assets/left-chevron.svg);
+}
+.carrousel_btn--right{
+    align-self: flex-start;
+    margin: 0 32px 0 0;
+    background: center no-repeat url(assets/right-chevron.svg);
+}
+.carrousel_image-one{
+    background: url(images/BG-dark-mode.png), #c4c4c4;
+}
+.carrousel_image-two{
+    background: url(images/BG.png), #c4c4c4;
+}
+.carrousel_image-three{
+    background: url(images/BG-dark-mode.png), #c4c4c4;
+}
+.carrousel_image-four{
+    background: url(images/BG.png), #c4c4c4;
+}
+.carrousel_image-five{
+    background: url(images/BG-dark-mode.png), #c4c4c4;
+}
+.carrousel_image-six{
+    background: url(images/BG.png), #c4c4c4;
+}
+.current-dot{
+    opacity: 100%;
 }
